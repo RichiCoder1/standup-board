@@ -29,6 +29,6 @@ steps:
     replaceExistingArchive: true
   displayName: 'archive build'
 
-- task: PublishPipelineArtifsct@0
+- task: PublishPipelineArtifact@0
   inputs:
-     targetPath: output.zip
+  targetPath: output.zip
