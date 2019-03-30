@@ -1,0 +1,65 @@
+.container {
+	height: 100%;
+}
+
+.container-columns {
+	display: grid;
+	grid: 0 auto 10fr / auto-flow 1fr;
+	height: 70%;
+}
+
+.container-header {
+	height: 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	background-color: #0083bb;
+	overflow: hidden;
+	color: #FFF;
+	
+	& > * {
+		height: 100%;
+		padding: 0.1em;
+	}
+	
+	& > :first-child {
+		flex: 0 0 auto;
+	}
+	
+	& > :last-child {
+		flex: 0 0 auto;
+	}
+
+	.sprintGoal {
+		flex: 1 1 auto;
+		max-width: 40%;
+	}
+
+	h1 {
+		font-size: 1em !important;
+		text-decoration: none;
+		margin: 0;
+	}
+	
+	a {
+		color: #FFF;
+	}
+}
+
+.container-gadgets {
+	display: flex;
+	height: 25%;
+	
+	& > * {
+		height: 100%;
+	}
+	
+	& > :first-child {
+		flex: 1 1 auto;
+	}
+	
+	& > :last-child {
+		flex: 0 0 auto;
+	}
+}

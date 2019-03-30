@@ -1,0 +1,95 @@
+.issue {
+	border: 1px solid black;
+	font-size: 0.8em;
+	min-height: 6em;
+	padding: 0.5em;
+	word-break: break-word;
+	
+	display: grid;
+	grid-template-columns: repeat(3, 2fr) 1fr;
+	grid-template-rows: auto auto auto .5em auto .5em auto;
+	grid-gap: 0 5px;
+	grid-template-areas:
+		"impediment impediment impediment icon"
+		"parent     parent     parent     parent"
+		"summary    summary    summary    summary"
+		".......... .......... .......... ...."
+		"epic       epic       epic       estimate"
+		".......... .......... .......... ...."
+		"assignee   assignee   assignee   age";
+	
+	&--recentStatusChange {
+		border-color: greenyellow;
+	}
+
+	&--impeded {
+		border-color: red;
+
+		.issue-summary {			
+			font-style: italic;
+			color: #707070;
+		}
+	}
+}
+
+.issue-summary {
+	grid-area: summary;
+	
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.subtask-issue-summary {
+	grid-area: summary;
+}
+
+img {
+	grid-area: icon;
+	justify-self: end;
+}
+
+.issue-impediment {
+	grid-area: impediment;
+	
+	background-color: rgba(255, 0, 0, 0.8);
+	font-weight: bold;
+	margin-bottom: 1em;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
+
+.issue-parent {
+	grid-area: parent;
+
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.issue-assignee {
+	grid-area: assignee;
+}
+
+.issue-estimate {
+	grid-area: estimate;
+	align-self: center;
+	justify-self: center;
+	
+	font-size: 1.4em;
+}
+
+.issue-epic {
+	grid-area: epic;
+	align-self: center;
+	
+	background-color:  rgba(50, 0, 50, 0.4);
+	border-radius: 5px;
+	color: white;
+	padding: 3px 5px;
+}
+
+.issue-age {
+	grid-area: age;
+	text-align: center;
+	white-space: nowrap;
+}

@@ -1,0 +1,36 @@
+{
+    "key": "com.uship.standup-board",
+    "name": "uShip Standup Board",
+    "description": "A sprint board optimized for uShip standups.",
+    "baseUrl": "https://<replace>.ngrok.io/",
+    "vendor": {
+      "name": "uShip",
+      "url": "https://www.uship.com"
+    },
+    "authentication": {
+      "type": "none"
+    },
+    "modules": {
+        "generalPages": [
+            {
+                "url": "/",
+                "key": "hello-world",
+                "location": "system.top.navigation.bar",
+                "name": {
+                    "value": "Greeting"
+                }
+            }
+        ],
+      "jiraProjectPages": [
+        {
+          "url": "/standup-board?projectId=${project.id}",
+          "weight": 100,
+          "name": {
+            "value": "Standup Board"
+          },
+          "key": "standup-board-page"
+        }
+      ]
+    },
+    "scopes": [ "READ" ]
+}
