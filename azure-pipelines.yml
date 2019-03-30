@@ -28,3 +28,7 @@ steps:
     archiveFile: output.zip
     replaceExistingArchive: true
   displayName: 'archive build'
+
+- task: PublishPipelineArtifsct@0
+  inputs:
+     targetPath: output.zip
