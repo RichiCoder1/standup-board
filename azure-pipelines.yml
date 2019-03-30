@@ -24,7 +24,7 @@ steps:
   inputs:
     rootFolderOrFile: ./build
     includeRootFolder: false
-    archiveType: 7z
-    archiveFile: output.7z
+    archiveType: zip
+    archiveFile: output.zip
     replaceExistingArchive: true
   displayName: 'archive build'
