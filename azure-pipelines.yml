@@ -31,4 +31,4 @@ steps:
 
 - task: PublishPipelineArtifact@0
   inputs:
-  targetPath: output.zip
+    targetPath: output.zip
