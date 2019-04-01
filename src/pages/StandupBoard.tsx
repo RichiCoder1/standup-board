@@ -20,8 +20,6 @@ export default function StandupBoard() {
         });
     }, []);
 
-    useEffect(() => AP.sizeToParent(true), []);
-
     return (
         <>
             {loading ? <Spinner></Spinner> : <BoardProvider board={board}><Container /></BoardProvider>}
